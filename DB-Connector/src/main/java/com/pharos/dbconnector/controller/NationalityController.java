@@ -1,7 +1,13 @@
 package com.pharos.dbconnector.controller;
 
-import org.springframework.stereotype.Controller;
+import com.pharos.dbconnector.service.NationalityService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class NationalityController {
+
+    @Autowired
+    NationalityService nationalityService;
+
 }
