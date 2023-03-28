@@ -18,6 +18,7 @@ import java.util.Calendar;
 @Data
 @Builder
 public class Candidate {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "CANDIDATE_ID", nullable = false)

@@ -17,6 +17,7 @@ import lombok.*;
 @Builder
 public class Gender {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "GENDER_ID", nullable = false)

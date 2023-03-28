@@ -17,6 +17,7 @@ import lombok.*;
 @Builder
 public class Document {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "ID_DOC", nullable = false)
