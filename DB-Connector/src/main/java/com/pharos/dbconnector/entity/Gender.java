@@ -1,30 +1,27 @@
-package com.pharos.dbconnector.model;
+package com.pharos.dbconnector.entity;
 
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import lombok.NoArgsConstructor;
-import lombok.Builder;
+import lombok.*;
+
 @Entity
 @AllArgsConstructor
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
+@Data
 @Builder
-public class Document {
+public class Gender {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "ID_DOC", nullable = false)
-    private int idDoc;
-    private String documentId;
+    @Column(name = "GENDER_ID", nullable = false)
+    private int idGender;
+    private String genderVal;
     private Boolean enable;
 
 }

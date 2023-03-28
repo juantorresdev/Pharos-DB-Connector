@@ -1,16 +1,11 @@
-package com.pharos.dbconnector.model;
+package com.pharos.dbconnector.entity;
 
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import lombok.NoArgsConstructor;
-import lombok.Builder;
+import lombok.*;
 
 @Entity
 @AllArgsConstructor
@@ -18,6 +13,7 @@ import lombok.Builder;
 @Setter
 @ToString
 @NoArgsConstructor
+@Data
 @Builder
 public class Nationality {
 
