@@ -1,6 +1,6 @@
 package com.pharos.dbconnector.service.impl;
 
-import com.pharos.dbconnector.model.Candidate;
+import com.pharos.dbconnector.entity.Candidate;
 import com.pharos.dbconnector.repository.CandidateRepository;
 import com.pharos.dbconnector.service.CandidateService;
 import org.springframework.beans.factory.annotation.Autowired;

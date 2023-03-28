@@ -1,6 +1,6 @@
 package com.pharos.dbconnector.service.impl;
 
-import com.pharos.dbconnector.model.Document;
+import com.pharos.dbconnector.entity.Document;
 import com.pharos.dbconnector.repository.DocumentRepository;
 import com.pharos.dbconnector.service.DocumentService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,16 +1,12 @@
-package com.pharos.dbconnector.model;
+package com.pharos.dbconnector.entity;
 
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Column;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import lombok.NoArgsConstructor;
-import lombok.Builder;
+import lombok.*;
+
 import java.util.Calendar;
 
 @Entity
@@ -19,8 +15,10 @@ import java.util.Calendar;
 @Setter
 @ToString
 @NoArgsConstructor
+@Data
 @Builder
 public class Candidate {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "CANDIDATE_ID", nullable = false)

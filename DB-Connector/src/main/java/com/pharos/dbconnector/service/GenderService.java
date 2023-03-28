@@ -1,6 +1,6 @@
 package com.pharos.dbconnector.service;
 
-import com.pharos.dbconnector.model.Gender;
+import com.pharos.dbconnector.entity.Gender;
 
 public interface GenderService {
 

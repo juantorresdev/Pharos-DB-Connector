@@ -1,6 +1,6 @@
 package com.pharos.dbconnector.service;
 
-import com.pharos.dbconnector.model.Document;
+import com.pharos.dbconnector.entity.Document;
 
 public interface DocumentService {
 
