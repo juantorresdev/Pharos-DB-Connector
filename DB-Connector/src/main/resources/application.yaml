@@ -1,0 +1,16 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: Pharos-DB-Connector
+  datasource:
+    password: Q1.w2-e3.r4
+    url: jdbc:postgresql://localhost:5555/postgres?currentSchema=PHAROS
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
