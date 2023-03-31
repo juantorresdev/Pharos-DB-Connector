@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Calendar;
+import java.util.Date;
 
 @Entity
 @AllArgsConstructor
@@ -12,7 +13,7 @@ import java.util.Calendar;
 @ToString
 @NoArgsConstructor
 @Builder
-@Table(name="CANDIDATE")
+@Table(name="PHAROS.CANDIDATE")
 public class Candidate {
 
     @Id
@@ -27,7 +28,7 @@ public class Candidate {
     @Column(name = "LASTNAME", nullable = false)
     private String lastname;
     @Column(name = "BIRTHDATE", nullable = false)
-    private Calendar birthdate;
+    private Date birthdate;
     @Column(name = "EMAIL", nullable = false)
     private String email;
     @Column(name = "PHONE", nullable = false)
@@ -38,11 +39,11 @@ public class Candidate {
     private Boolean status;
     @Column(name = "ACTIVATIONCODE", nullable = false)
     private String activationCode;
-    @Column(name = "ID_DOC", nullable = false)
+    @Column(name = "ID_DOC")
     private int documentId;
-    @Column(name = "GENDER_ID", nullable = false)
+    @Column(name = "GENDER_ID")
     private int genderId;
-    @Column(name = "NATIONALITY_ID", nullable = false)
+    @Column(name = "NATIONALITY_ID")
     private int nationalityId;
 
 }
