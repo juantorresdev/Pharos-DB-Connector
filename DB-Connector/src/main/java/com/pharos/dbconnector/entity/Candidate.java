@@ -1,10 +1,6 @@
 package com.pharos.dbconnector.entity;
 
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Calendar;
@@ -15,8 +11,8 @@ import java.util.Calendar;
 @Setter
 @ToString
 @NoArgsConstructor
-@Data
 @Builder
+@Table(name="CANDIDATE")
 public class Candidate {
 
     @Id

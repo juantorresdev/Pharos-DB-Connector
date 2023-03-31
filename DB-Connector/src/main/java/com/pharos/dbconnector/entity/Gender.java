@@ -1,10 +1,6 @@
 package com.pharos.dbconnector.entity;
 
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -13,8 +9,8 @@ import lombok.*;
 @Setter
 @ToString
 @NoArgsConstructor
-@Data
 @Builder
+@Table(name="GENDER")
 public class Gender {
 
 
