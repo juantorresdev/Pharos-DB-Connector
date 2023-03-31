@@ -1,10 +1,11 @@
 package com.pharos.dbconnector.service;
 
-import com.pharos.dbconnector.entity.Candidate;
+import com.pharos.dbconnector.wrapper.request.CandidateRequest;
+import com.pharos.dbconnector.wrapper.response.CandidateResponse;
 
 public interface CandidateService {
-    public Candidate createCandidate();
-    public Candidate updateCandidate();
-    public Candidate getCandidate();
-    public Candidate deleteCandidate();
+    public CandidateResponse createCandidate(CandidateRequest candidateRequest);
+    public CandidateResponse updateCandidate(CandidateRequest candidateRequest);
+    public CandidateResponse getCandidate();
+    public CandidateResponse deleteCandidate(CandidateRequest candidateRequest);
 }

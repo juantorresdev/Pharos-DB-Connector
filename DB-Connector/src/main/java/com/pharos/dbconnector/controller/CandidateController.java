@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController(value = "/apiV1/candidate")
+@RestController
+@RequestMapping(value = "/apiV1/candidate")
 public class CandidateController {
 
     @Autowired
@@ -39,6 +40,12 @@ public class CandidateController {
     public ResponseEntity<CandidateResponse> createCandidate(@RequestBody CandidateRequest candidateRequest){
 
         CandidateResponse response = new CandidateResponse();
+
+        try{
+            response = candidateService.createCandidate(candidateRequest);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
         return ResponseEntity.ok(response);
     }
