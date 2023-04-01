@@ -18,7 +18,9 @@ public class Nationality {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "NATIONALITY_ID", nullable = false)
     private int idNationality;
+    @Column(name = "NATIONALITYVAL", nullable = false)
     private String nationalityVal;
+    @Column(name = "ENABLE", nullable = false)
     private Boolean enable;
 
 }

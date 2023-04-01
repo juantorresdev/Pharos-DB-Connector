@@ -18,7 +18,9 @@ public class Gender {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "GENDER_ID", nullable = false)
     private int idGender;
+    @Column(name = "GENDERVAL", nullable = false)
     private String genderVal;
+    @Column(name = "ENABLE", nullable = false)
     private Boolean enable;
 
 }
