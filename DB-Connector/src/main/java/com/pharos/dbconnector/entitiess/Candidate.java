@@ -1,9 +1,8 @@
-package com.pharos.dbconnector.entity;
+package com.pharos.dbconnector.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Calendar;
 import java.util.Date;
 
 @Entity
@@ -13,7 +12,7 @@ import java.util.Date;
 @ToString
 @NoArgsConstructor
 @Builder
-@Table(name="PHAROS.CANDIDATE")
+@Table(name="candidate")
 public class Candidate {
 
     @Id

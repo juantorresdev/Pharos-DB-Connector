@@ -1,15 +1,15 @@
 server:
   port: 9999
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: Q1.w2-e3.r4
+    username: root
+    url: jdbc:mysql://localhost:5555/PHAROS
   application:
     name: Pharos-DB-Connector
-  datasource:
-    url: jdbc:postgresql://localhost:5555/postgres
-    username: postgres
-    password: Q1.w2-e3.r4
-  jpa:
-    properties:
-      hibernate:
-        ddl-auto: validate
-        default_schema: PHAROS
-    show-sql: true
+
