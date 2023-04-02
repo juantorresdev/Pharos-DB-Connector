@@ -1,6 +1,6 @@
 package com.pharos.dbconnector.service.impl;
 
-import com.pharos.dbconnector.entity.Gender;
+import com.pharos.dbconnector.entities.Gender;
 import com.pharos.dbconnector.repository.GenderRepository;
 import com.pharos.dbconnector.service.GenderService;
 import org.springframework.beans.factory.annotation.Autowired;

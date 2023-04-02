@@ -1,6 +1,6 @@
 package com.pharos.dbconnector.service.impl;
 
-import com.pharos.dbconnector.entity.Nationality;
+import com.pharos.dbconnector.entities.Nationality;
 import com.pharos.dbconnector.repository.NationalityRepository;
 import com.pharos.dbconnector.service.NationalityService;
 import org.springframework.beans.factory.annotation.Autowired;
