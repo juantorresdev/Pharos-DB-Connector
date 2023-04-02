@@ -1,4 +1,4 @@
-package com.pharos.dbconnector.entity;
+package com.pharos.dbconnector.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
