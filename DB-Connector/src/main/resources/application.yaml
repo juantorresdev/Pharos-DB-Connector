@@ -1,15 +1,19 @@
 server:
   port: 9999
 spring:
+  application:
+    name: Pharos-DB-Connector
   jpa:
     hibernate:
       ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     password: Q1.w2-e3.r4
     username: root
     url: jdbc:mysql://localhost:5555/PHAROS
-  application:
-    name: Pharos-DB-Connector
+
+
 
