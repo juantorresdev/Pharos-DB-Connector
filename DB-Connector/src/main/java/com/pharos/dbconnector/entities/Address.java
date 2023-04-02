@@ -20,7 +20,6 @@ public class Address {
     private Integer id;
 
     @NotNull
-    @Lob
     @Column(name = "STREET", nullable = false)
     private String street;
 

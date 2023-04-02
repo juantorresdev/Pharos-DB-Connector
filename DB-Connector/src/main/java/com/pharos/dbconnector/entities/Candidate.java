@@ -3,13 +3,16 @@ package com.pharos.dbconnector.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
+import java.util.Date;
 
+@AllArgsConstructor
 @Getter
 @Setter
+@ToString
+@NoArgsConstructor
 @Entity
 @Table(name = "CANDIDATE", schema = "PHAROS")
 public class Candidate {
@@ -35,7 +38,8 @@ public class Candidate {
 
     @NotNull
     @Column(name = "BIRTHDATE", nullable = false)
-    private LocalDate birthdate;
+    //private LocalDate birthdate;
+    private Date birthdate;
 
     @Size(max = 255)
     @NotNull

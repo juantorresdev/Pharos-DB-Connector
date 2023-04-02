@@ -1,6 +1,6 @@
 package com.pharos.dbconnector.service.impl;
 
-import com.pharos.dbconnector.entity.Candidate;
+import com.pharos.dbconnector.entities.Candidate;
 import com.pharos.dbconnector.repository.CandidateRepository;
 import com.pharos.dbconnector.service.CandidateService;
 import com.pharos.dbconnector.wrapper.request.CandidateRequest;
@@ -22,8 +22,8 @@ public class CandidateServiceImpl implements CandidateService {
         Candidate candidate = convertRequestToModel(candidateRequest);
 
         candidate.setPharosId(UUID.randomUUID().toString());
-        candidate.setEnable(true);
-        candidate.setStatus(true);
+        candidate.setEnable("true");
+        candidate.setStatus("true");
 
         candidateRepository.save(candidate);
 

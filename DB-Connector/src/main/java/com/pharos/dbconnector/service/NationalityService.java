@@ -1,6 +1,6 @@
 package com.pharos.dbconnector.service;
 
-import com.pharos.dbconnector.entity.Nationality;
+import com.pharos.dbconnector.entities.Nationality;
 
 public interface NationalityService {
     public Nationality createNationality();
