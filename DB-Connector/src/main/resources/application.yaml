@@ -15,5 +15,12 @@ spring:
     username: root
     url: jdbc:mysql://localhost:5555/PHAROS
 
-
-
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
+      hibernate: trace
+    com:
+      pharos:
+        dbconnector: trace
