@@ -6,6 +6,8 @@ import com.pharos.dbconnector.service.NationalityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class NationalityServiceImpl implements NationalityService {
 
@@ -19,6 +21,11 @@ public class NationalityServiceImpl implements NationalityService {
 
     @Override
     public Nationality updateNationality() {
+        return null;
+    }
+
+    @Override
+    public List<Nationality> getNationalities() {
         return null;
     }
 
