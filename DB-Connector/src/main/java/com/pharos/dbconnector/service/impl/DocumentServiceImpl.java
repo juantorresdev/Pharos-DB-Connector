@@ -6,6 +6,8 @@ import com.pharos.dbconnector.service.DocumentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DocumentServiceImpl implements DocumentService {
 
@@ -29,6 +31,11 @@ public class DocumentServiceImpl implements DocumentService {
 
     @Override
     public Document deleteDocument() {
+        return null;
+    }
+
+    @Override
+    public List<Document> getDocuments() {
         return null;
     }
 }

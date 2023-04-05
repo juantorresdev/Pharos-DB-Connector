@@ -8,6 +8,7 @@ import com.pharos.dbconnector.wrapper.response.CandidateResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -44,6 +45,11 @@ public class CandidateServiceImpl implements CandidateService {
 
     @Override
     public CandidateResponse deleteCandidate(CandidateRequest candidateRequest) {
+        return null;
+    }
+
+    @Override
+    public List<Candidate> getCandidates() {
         return null;
     }
 

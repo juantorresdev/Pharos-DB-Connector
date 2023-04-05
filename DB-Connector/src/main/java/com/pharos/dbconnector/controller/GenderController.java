@@ -9,7 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController(value = "/apiV1/gender")
+@RestController(value = "/api/v1/gender")
 public class GenderController {
 
     @Autowired

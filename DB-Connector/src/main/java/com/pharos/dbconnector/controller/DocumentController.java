@@ -9,7 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController(value = "/apiV1/document")
+@RestController(value = "/api/v1/document")
 public class DocumentController {
 
     @Autowired
@@ -45,9 +45,9 @@ public class DocumentController {
     @PutMapping(value = "updateDocument", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponse> updateDocument(@RequestBody DocumentRequest documentRequest){
 
-        DocumentResponse resṕonse = new DocumentResponse();
+        DocumentResponse response = new DocumentResponse();
 
-        return ResponseEntity.ok(resṕonse);
+        return ResponseEntity.ok(response);
 
     }
 
