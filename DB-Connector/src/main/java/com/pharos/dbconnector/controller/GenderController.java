@@ -18,6 +18,8 @@ public class GenderController {
     @GetMapping(value = "/getGender", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenderResponse> getGender(@RequestParam(value = "id") int id){
 
+        log.trace("/api/v1/gender/getGender Requested");
+
         GenderResponse response = new GenderResponse();
 
         return ResponseEntity.ok(response);
