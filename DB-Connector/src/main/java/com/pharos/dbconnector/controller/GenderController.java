@@ -4,12 +4,14 @@ import com.pharos.dbconnector.service.GenderService;
 import com.pharos.dbconnector.wrapper.request.GenderRequest;
 import com.pharos.dbconnector.wrapper.response.GenderResponse;
 import com.pharos.dbconnector.wrapper.response.GenderResponseList;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController(value = "/api/v1/gender")
+@Slf4j
 public class GenderController {
 
     @Autowired
