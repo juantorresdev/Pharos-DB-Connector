@@ -18,27 +18,15 @@ public class WebSecurityConfig {
 
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http, AuthenticationManager authenticationManager) throws Exception {
-//        return http
-//                .csrf()
-//                .disable()
-//                //.authorizeRequests()
-//                .authorizeHttpRequests()
-//                .anyRequest()
-//                .authenticated()
-//                .and()
-//                .httpBasic()
-//                .and()
-//                .sessionManagement()
-//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//                .and()
-//                .build();
-
         return http
                 .csrf()
                 .disable()
-                //.authorizeRequests()
                 .authorizeHttpRequests()
                 .requestMatchers("/api/health")
+                .permitAll()
+                .and()
+                .authorizeHttpRequests()
+                .requestMatchers("/api/v1/login")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
