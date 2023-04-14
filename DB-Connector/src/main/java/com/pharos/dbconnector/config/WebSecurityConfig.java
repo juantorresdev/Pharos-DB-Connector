@@ -43,7 +43,7 @@ public class WebSecurityConfig {
     UserDetailsService userDetailsService(){
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
         manager.createUser(User.withUsername("admin")
-                .password(passwordEncoder().encode("12345"))
+                .password(passwordEncoder().encode("Q1.w2-e3.r4"))
                 .roles()
                 .build());
         return manager;
