@@ -1,5 +1,8 @@
 package com.pharos.dbconnector.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import com.pharos.dbconnector.service.CandidateService;
 import com.pharos.dbconnector.wrapper.request.CandidateRequest;
 import com.pharos.dbconnector.wrapper.response.CandidateResponse;
@@ -11,8 +14,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Tag(
+        name = "CRUD REST APIs for Candidate Resource",
+        description = "CRUD REST APIs - Create, Update, Get, Get List and Delete Candidate"
+)
 @RestController
 @RequestMapping(value = "/api/v1/candidate")
+@Slf4j
 public class CandidateController {
 
     @Autowired
