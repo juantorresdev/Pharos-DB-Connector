@@ -1,5 +1,8 @@
 package com.pharos.dbconnector.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import com.pharos.dbconnector.service.NationalityService;
 import com.pharos.dbconnector.wrapper.response.NationalityResponse;
 import com.pharos.dbconnector.wrapper.response.NationalityResponseList;
@@ -8,7 +11,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController(value = ("/api/v1/nationality"))
+@Tag(
+        name = "CRUD REST APIs for Gender Resource",
+        description = "CRUD REST APIs - Create, Update, Get, Get List and Delete Gender"
+)
+@RestController
+@RequestMapping(value = "/api/v1/nationality")
+@Slf4j
 public class NationalityController {
 
     @Autowired

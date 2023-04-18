@@ -1,5 +1,8 @@
 package com.pharos.dbconnector.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import com.pharos.dbconnector.service.AddressService;
 import com.pharos.dbconnector.wrapper.response.AddressResponse;
 import com.pharos.dbconnector.wrapper.response.AddressResponseList;
@@ -8,8 +11,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Tag(
+        name = "CRUD REST APIs for Address Resource",
+        description = "CRUD REST APIs - Create, Update, Get, Get List and Delete Address"
+)
 @RestController
 @RequestMapping("/api/v1/address")
+@Slf4j
 public class AddressController {
 
     @Autowired
