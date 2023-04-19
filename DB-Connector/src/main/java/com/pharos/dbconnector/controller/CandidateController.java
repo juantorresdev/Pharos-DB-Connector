@@ -26,6 +26,14 @@ public class CandidateController {
     @Autowired
     CandidateService candidateService;
 
+    @Operation(
+        summary = "Get candidate endpoint",
+        description = "Get candidate saved in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 200 OK"
+    )
     @GetMapping(value = "/getCandidate", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CandidateResponse> getCandidate(@RequestParam(value = "id") int candidateId){
 
@@ -35,6 +43,14 @@ public class CandidateController {
 
     }
 
+    @Operation(
+        summary = "Get candidate list endpoint",
+        description = "Get list of candidates saved in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 200 OK"
+    )
     @PostMapping(value = "/getCandidatesList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CandidateResponseList> getCandidatesList(){
 
@@ -44,6 +60,18 @@ public class CandidateController {
 
     }
 
+    @Operation(
+        summary = "Create candidate endpoint",
+        description = "Create candidate and save it in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+        responseCode = "503",
+        description = "HTTP Status 503"
+    )
     @PostMapping(value = "/createCandidate", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CandidateResponse> createCandidate(@RequestBody CandidateRequest candidateRequest){
 
@@ -58,6 +86,18 @@ public class CandidateController {
         return ResponseEntity.ok(response);
     }
 
+    @Operation(
+        summary = "Update candidate endpoint",
+        description = "Update candidate in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+        responseCode = "503",
+        description = "HTTP Status 503"
+    )
     @PutMapping(value = "/updateCandidate", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CandidateResponse> updateCandidate(@RequestBody CandidateRequest candidateRequest){
 
@@ -66,6 +106,18 @@ public class CandidateController {
         return ResponseEntity.ok(response);
     }
 
+    @Operation(
+        summary = "Delete candidate endpoint",
+        description = "Delete candidate in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+        responseCode = "503",
+        description = "HTTP Status 503"
+    )
     @DeleteMapping(value = "/deleteCandidate", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CandidateResponse> deleteCandidate(@RequestBody CandidateRequest candidateRequest){
 
