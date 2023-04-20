@@ -23,6 +23,14 @@ public class AddressController {
     @Autowired
     AddressService addressService;
 
+    @Operation(
+        summary = "Get address endpoint",
+        description = "Get address saved in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 200 OK"
+    )
     @GetMapping(value = "/getAddress", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponse> getAddress(@RequestParam(value = "id") int id){
 
@@ -32,6 +40,14 @@ public class AddressController {
 
     }
 
+    @Operation(
+        summary = "Get address list endpoint",
+        description = "Get list of address saved in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 200 OK"
+    )
     @PostMapping(value = "/getAddressList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponseList> getAddressList() {
 
@@ -41,6 +57,18 @@ public class AddressController {
 
     }
 
+    @Operation(
+        summary = "Create address endpoint",
+        description = "Create address and save it in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+        responseCode = "503",
+        description = "HTTP Status 503"
+    )
     @PostMapping(value = "/createAddress", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponse> createAddress() {
 
@@ -50,6 +78,18 @@ public class AddressController {
 
     }
 
+    @Operation(
+        summary = "Update address endpoint",
+        description = "Update address in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+        responseCode = "503",
+        description = "HTTP Status 503"
+    )
     @PutMapping(value = "/updateAddress", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponse> updateAddress() {
 
@@ -59,6 +99,18 @@ public class AddressController {
 
     }
 
+    @Operation(
+        summary = "Update address endpoint",
+        description = "Update address in PharosDB"
+    )
+    @ApiResponse(
+        responseCode = "201",
+        description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+        responseCode = "503",
+        description = "HTTP Status 503"
+    )
     @DeleteMapping(value = "/deleteAddress", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponse> deleteAddress() {
 
