@@ -7,6 +7,7 @@ import com.pharos.dbconnector.service.CandidateService;
 import com.pharos.dbconnector.wrapper.request.CandidateRequest;
 import com.pharos.dbconnector.wrapper.response.CandidateResponse;
 import com.pharos.dbconnector.wrapper.response.CandidateResponseList;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

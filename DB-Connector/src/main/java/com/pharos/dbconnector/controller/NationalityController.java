@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import com.pharos.dbconnector.service.NationalityService;
 import com.pharos.dbconnector.wrapper.response.NationalityResponse;
 import com.pharos.dbconnector.wrapper.response.NationalityResponseList;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
