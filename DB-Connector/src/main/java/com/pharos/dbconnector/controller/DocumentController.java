@@ -7,6 +7,7 @@ import com.pharos.dbconnector.service.DocumentService;
 import com.pharos.dbconnector.wrapper.request.DocumentRequest;
 import com.pharos.dbconnector.wrapper.response.DocumentResponse;
 import com.pharos.dbconnector.wrapper.response.DocumentResponseList;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +25,14 @@ public class DocumentController {
     @Autowired
     DocumentService documentService;
 
+    @Operation(
+            summary = "Get document endpoint",
+            description = "Get document saved in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 200 OK"
+    )
     @GetMapping(value = "/getDocument", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponse> getDocument(@RequestParam(value = "id") int documentId){
 
@@ -33,6 +42,14 @@ public class DocumentController {
 
     }
 
+    @Operation(
+            summary = "Get document list endpoint",
+            description = "Get list of document saved in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 200 OK"
+    )
     @PostMapping(value = "/getDocumentsList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponseList> getDocumentsList(){
 
@@ -42,6 +59,18 @@ public class DocumentController {
 
     }
 
+    @Operation(
+            summary = "Create document endpoint",
+            description = "Create document and save it in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @PostMapping(value = "createDocument", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponse> createDocument(@RequestBody DocumentRequest documentRequest){
 
@@ -51,6 +80,18 @@ public class DocumentController {
 
     }
 
+    @Operation(
+            summary = "Update document endpoint",
+            description = "Update document in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @PutMapping(value = "updateDocument", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponse> updateDocument(@RequestBody DocumentRequest documentRequest){
 
@@ -60,6 +101,18 @@ public class DocumentController {
 
     }
 
+    @Operation(
+            summary = "Delete candidate endpoint",
+            description = "Delete candidate in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @DeleteMapping(value = "deleteDocument", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponse> deleteDocument(@RequestBody DocumentRequest documentRequest){
 
