@@ -25,6 +25,14 @@ public class GenderController {
     @Autowired
     GenderService genderService;
 
+    @Operation(
+            summary = "Get gender endpoint",
+            description = "Get document saved in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 200 OK"
+    )
     @GetMapping(value = "/getGender", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenderResponse> getGender(@RequestParam(value = "id") int id){
 
@@ -36,6 +44,14 @@ public class GenderController {
 
     }
 
+    @Operation(
+            summary = "Get gender list endpoint",
+            description = "Get list of gender saved in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 200 OK"
+    )
     @PostMapping(value = "/getGenderList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenderResponseList> getGenderList(){
 
@@ -45,6 +61,18 @@ public class GenderController {
 
     }
 
+    @Operation(
+            summary = "Create gender endpoint",
+            description = "Create gender and save it in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @PostMapping(value = "/createGender", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenderResponse> createGender(@RequestBody GenderRequest genderRequest){
 
@@ -54,6 +82,18 @@ public class GenderController {
 
     }
 
+    @Operation(
+            summary = "Update gender endpoint",
+            description = "Update gender in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @PutMapping(value = "/updateGender", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenderResponse> updateGender(@RequestBody GenderRequest genderRequest){
 
@@ -63,6 +103,18 @@ public class GenderController {
 
     }
 
+    @Operation(
+            summary = "Delete gender endpoint",
+            description = "Delete gender in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @DeleteMapping(value = "/deleteGender", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenderResponse> deleteGender(@RequestBody GenderRequest genderRequest){
 
