@@ -20,6 +20,14 @@ import java.util.UUID;
 @Slf4j
 public class HealthController {
 
+    @Operation(
+            summary = "Get health endpoint",
+            description = "Get status 200 - OK if service is active"
+    )
+    @ApiResponse(
+            responseCode = "200",
+            description = "HTTP Status 200 OK"
+    )
     @GetMapping(value = "/api/health", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<HealthResponse> getHealthResponse(){
 
