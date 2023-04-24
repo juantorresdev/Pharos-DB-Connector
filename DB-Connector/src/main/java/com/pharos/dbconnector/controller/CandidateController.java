@@ -35,6 +35,10 @@ public class CandidateController {
         responseCode = "201",
         description = "HTTP Status 200 OK"
     )
+    @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
+    )
     @GetMapping(value = "/getCandidate", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CandidateResponse> getCandidate(@RequestParam(value = "id") int candidateId){
 
@@ -49,8 +53,12 @@ public class CandidateController {
         description = "Get list of candidates saved in PharosDB"
     )
     @ApiResponse(
-        responseCode = "201",
-        description = "HTTP Status 200 OK"
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
+    )
+    @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400"
     )
     @PostMapping(value = "/getCandidatesList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CandidateResponseList> getCandidatesList(){
@@ -68,6 +76,10 @@ public class CandidateController {
     @ApiResponse(
         responseCode = "201",
         description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
     )
     @ApiResponse(
         responseCode = "503",
@@ -96,6 +108,10 @@ public class CandidateController {
         description = "HTTP Status 201 CREATED"
     )
     @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
+    )
+    @ApiResponse(
         responseCode = "503",
         description = "HTTP Status 503"
     )
@@ -114,6 +130,10 @@ public class CandidateController {
     @ApiResponse(
         responseCode = "201",
         description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
     )
     @ApiResponse(
         responseCode = "503",
