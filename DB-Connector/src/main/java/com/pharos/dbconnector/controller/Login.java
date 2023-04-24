@@ -18,6 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class Login {
 
 
+    @ApiResponse(
+            responseCode = "200",
+            description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
+    )
     @PostMapping(value = "/login", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> login(){
 

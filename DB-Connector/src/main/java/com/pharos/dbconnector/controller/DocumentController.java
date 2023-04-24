@@ -33,6 +33,10 @@ public class DocumentController {
             responseCode = "201",
             description = "HTTP Status 200 OK"
     )
+    @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
+    )
     @GetMapping(value = "/getDocument", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponse> getDocument(@RequestParam(value = "id") int documentId){
 
@@ -50,6 +54,10 @@ public class DocumentController {
             responseCode = "201",
             description = "HTTP Status 200 OK"
     )
+    @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
+    )
     @PostMapping(value = "/getDocumentsList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponseList> getDocumentsList(){
 
@@ -66,6 +74,10 @@ public class DocumentController {
     @ApiResponse(
             responseCode = "201",
             description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
     )
     @ApiResponse(
             responseCode = "503",
@@ -89,6 +101,10 @@ public class DocumentController {
             description = "HTTP Status 201 CREATED"
     )
     @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
+    )
+    @ApiResponse(
             responseCode = "503",
             description = "HTTP Status 503"
     )
@@ -108,6 +124,10 @@ public class DocumentController {
     @ApiResponse(
             responseCode = "201",
             description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "400",
+            description = "HTTP Status 400 Error"
     )
     @ApiResponse(
             responseCode = "503",
