@@ -37,6 +37,10 @@ public class DocumentController {
             responseCode = "400",
             description = "HTTP Status 400 Error"
     )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
     @GetMapping(value = "/getDocument", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponse> getDocument(@RequestParam(value = "id") int documentId){
 
@@ -58,6 +62,10 @@ public class DocumentController {
             responseCode = "400",
             description = "HTTP Status 400 Error"
     )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
     @PostMapping(value = "/getDocumentsList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<DocumentResponseList> getDocumentsList(){
 
@@ -78,6 +86,10 @@ public class DocumentController {
     @ApiResponse(
             responseCode = "400",
             description = "HTTP Status 400 Error"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
     )
     @ApiResponse(
             responseCode = "503",
@@ -105,6 +117,10 @@ public class DocumentController {
             description = "HTTP Status 400 Error"
     )
     @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
             responseCode = "503",
             description = "HTTP Status 503"
     )
@@ -128,6 +144,10 @@ public class DocumentController {
     @ApiResponse(
             responseCode = "400",
             description = "HTTP Status 400 Error"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
     )
     @ApiResponse(
             responseCode = "503",

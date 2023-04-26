@@ -32,6 +32,14 @@ public class AddressController {
         responseCode = "201",
         description = "HTTP Status 200 OK"
     )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @GetMapping(value = "/getAddress", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponse> getAddress(@RequestParam(value = "id") int id){
 
@@ -48,6 +56,14 @@ public class AddressController {
     @ApiResponse(
         responseCode = "201",
         description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
     )
     @PostMapping(value = "/getAddressList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponseList> getAddressList() {
@@ -67,8 +83,12 @@ public class AddressController {
         description = "HTTP Status 201 CREATED"
     )
     @ApiResponse(
-        responseCode = "503",
-        description = "HTTP Status 503"
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
     )
     @PostMapping(value = "/createAddress", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponse> createAddress() {
@@ -88,8 +108,12 @@ public class AddressController {
         description = "HTTP Status 201 CREATED"
     )
     @ApiResponse(
-        responseCode = "503",
-        description = "HTTP Status 503"
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
     )
     @PutMapping(value = "/updateAddress", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponse> updateAddress() {
@@ -109,8 +133,12 @@ public class AddressController {
         description = "HTTP Status 201 CREATED"
     )
     @ApiResponse(
-        responseCode = "503",
-        description = "HTTP Status 503"
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
     )
     @DeleteMapping(value = "/deleteAddress", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AddressResponse> deleteAddress() {

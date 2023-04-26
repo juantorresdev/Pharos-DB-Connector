@@ -39,6 +39,10 @@ public class CandidateController {
             responseCode = "400",
             description = "HTTP Status 400 Error"
     )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
     @GetMapping(value = "/getCandidate", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CandidateResponse> getCandidate(@RequestParam(value = "id") int candidateId){
 
@@ -60,6 +64,10 @@ public class CandidateController {
             responseCode = "400",
             description = "HTTP Status 400"
     )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
     @PostMapping(value = "/getCandidatesList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<CandidateResponseList> getCandidatesList(){
 
@@ -80,6 +88,10 @@ public class CandidateController {
     @ApiResponse(
             responseCode = "400",
             description = "HTTP Status 400 Error"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
     )
     @ApiResponse(
         responseCode = "503",
@@ -112,6 +124,10 @@ public class CandidateController {
             description = "HTTP Status 400 Error"
     )
     @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
         responseCode = "503",
         description = "HTTP Status 503"
     )
@@ -134,6 +150,10 @@ public class CandidateController {
     @ApiResponse(
             responseCode = "400",
             description = "HTTP Status 400 Error"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
     )
     @ApiResponse(
         responseCode = "503",
