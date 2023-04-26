@@ -33,6 +33,14 @@ public class GenderController {
             responseCode = "201",
             description = "HTTP Status 200 OK"
     )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @GetMapping(value = "/getGender", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenderResponse> getGender(@RequestParam(value = "id") int id){
 
@@ -52,6 +60,14 @@ public class GenderController {
             responseCode = "201",
             description = "HTTP Status 200 OK"
     )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @PostMapping(value = "/getGenderList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenderResponseList> getGenderList(){
 
@@ -68,6 +84,10 @@ public class GenderController {
     @ApiResponse(
             responseCode = "201",
             description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
     )
     @ApiResponse(
             responseCode = "503",
@@ -91,6 +111,10 @@ public class GenderController {
             description = "HTTP Status 201 CREATED"
     )
     @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
             responseCode = "503",
             description = "HTTP Status 503"
     )
@@ -110,6 +134,10 @@ public class GenderController {
     @ApiResponse(
             responseCode = "201",
             description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
     )
     @ApiResponse(
             responseCode = "503",

@@ -24,6 +24,22 @@ public class NationalityController {
     @Autowired
     NationalityService nationalityService;
 
+    @Operation(
+            summary = "Get nationality endpoint",
+            description = "Get nationality saved in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @GetMapping(value = "/getNationality", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<NationalityResponse> getNationality(){
 
@@ -33,6 +49,22 @@ public class NationalityController {
 
     }
 
+    @Operation(
+            summary = "Get nationality list endpoint",
+            description = "Get list of gender saved in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 200 OK"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @PostMapping(value = "/getNationalityList", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<NationalityResponseList> getNationalityList(@RequestBody NationalityResponse nationalityResponse){
 
@@ -42,6 +74,22 @@ public class NationalityController {
 
     }
 
+    @Operation(
+            summary = "Create nationality endpoint",
+            description = "Create nationality and save it in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @PostMapping(value = "/createNationality", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<NationalityResponse> createNationality(@RequestBody NationalityResponse nationalityResponse){
 
@@ -51,6 +99,22 @@ public class NationalityController {
 
     }
 
+    @Operation(
+            summary = "Create nationality endpoint",
+            description = "Create nationality and save it in PharosDB"
+    )
+    @ApiResponse(
+            responseCode = "201",
+            description = "HTTP Status 201 CREATED"
+    )
+    @ApiResponse(
+            responseCode = "403",
+            description = "HTTP Status 403 Authentication Error"
+    )
+    @ApiResponse(
+            responseCode = "503",
+            description = "HTTP Status 503"
+    )
     @PutMapping(value = "/updateNationality", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<NationalityResponse> updateNationality(@RequestBody NationalityResponse nationalityResponse){
 
